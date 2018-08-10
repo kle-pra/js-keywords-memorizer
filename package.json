@@ -1,0 +1,19 @@
+{
+  "name": "js-keywords-memorizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kle-pra/js-keywords-memorizer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kle-pra/js-keywords-memorizer/issues"
+  },
+  "homepage": "https://github.com/kle-pra/js-keywords-memorizer#readme"
+}
