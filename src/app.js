@@ -28,6 +28,8 @@ const score = document.getElementById('score');
 const time = document.getElementById('time');
 const input = document.getElementById('input');
 const word = document.getElementById('keyword');
+const message = document.getElementById('message');
+const instructions = document.getElementById('instructions');
 
 window.addEventListener('load', initGame);
 
@@ -50,17 +52,16 @@ function initGame() {
   setInterval(() => {
     if (gameIsOn) {
       if (gameOver) {
-
-        const keyword = 'Game over! Your score is ' + currentScore;
-        var msg = new SpeechSynthesisUtterance(keyword);
-        window.speechSynthesis.speak(msg);
-
-        alert("Game over! Score is " + currentScore);
+        const msg = 'Game over! Your score is ' + currentScore;
+        instructions.style.visibility = "visible";
+        window.speechSynthesis.speak(new SpeechSynthesisUtterance(msg));
+        message.innerHTML = msg;
         currentScore = 0;
         score.innerHTML = currentScore;
         gameOver = false;
         gameIsOn = false;
         timeLeft = 5;
+        input.value = "";
       }
     }
   }, 100);
@@ -68,8 +69,9 @@ function initGame() {
 
 function matchWord(e) {
   gameIsOn = true;
+  message.innerHTML = "";
+  instructions.style.visibility = "hidden";
   const val = input.value;
-
   if (val === word.innerHTML) {
     if (!gameOver) {
       currentScore += 50;
