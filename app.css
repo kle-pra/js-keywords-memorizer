@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -9027,6 +9028,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-/* div {
-  color: red;
-} */
+* {
+  font-family: 'Press Start 2P', cursive;
+}
+
